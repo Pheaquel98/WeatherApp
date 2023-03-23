@@ -14,29 +14,46 @@
   <body>
     <div class="tablet-border">
       <div class="container">
+        <div class="camera"></div>
+        <div class="blue-dot"></div>
         <header class="app-header">
           <i class="bi bi-cloud"></i>
-          <h1>Weather App</h1>
+          <h1>Weather</h1>
         </header>
+        <div class="weather-input">
+          <input
+            class="input-weather"
+            type="text"
+            required
+            placeholder="Search..."
+          />
+          <i class="bi bi-search"></i>
+        </div>
         <section class="app-body">
-          <div class="weather-input">
-            <input type="text" required placeholder="Search..." />
+          <div class="city-div">
+            <i class="bi bi-geo-alt-fill"></i>
+            <p class="city-name">istanbul</p>
           </div>
-          <p class="city-name">istanbul</p>
           <div class="temp-div">
             <i class="bi bi-brightness-high-fill"></i>
-            <div class="temp">15°C</div>
+            <em class="temp"><span>15°</span>C</em>
+            <p class="temp-desc">Sunny</p>
           </div>
-          <div class="wind-div">
+          <div class="weather-div">
             <i class="bi bi-wind"></i>
-            <div class="wind">15km2</div>
-          </div>
-          <div class="moisture-div">
+            <div class="wind-div">
+              <span class="wind">4km/h</span>
+              <p class="wind-desc">wind</p>
+            </div>
             <i class="bi bi-moisture"></i>
-            <div class="humidity">87%</div>
+            <div class="humidity-div">
+              <span class="humidity">87%</span>
+              <p class="humidity-desc">humidity</p>
+            </div>
           </div>
         </section>
       </div>
     </div>
+    <script src="main.js"></script>
   </body>
 </html>

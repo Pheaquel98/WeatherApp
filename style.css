@@ -1,5 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,400;1,500&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-transform: capitalize;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+.tablet-border {
+  background: linear-gradient(
+    45deg,
+    rgba(36, 183, 207, 1) 0%,
+    rgba(27, 134, 208, 1) 35%,
+    rgba(25, 105, 199, 1) 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 295px;
+  height: 616px;
+  border: 5px solid black;
+  border-radius: 10px;
+}
+
+.container {
+  display: flex;
+  width: 90%;
+  height: 90%;
+  position: relative;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.container .camera {
+  position: absolute;
+  background-color: black;
+  width: 15px;
+  height: 15px;
+  border: 1px solid black;
+  border-radius: 100%;
+  left: 50%;
+  top: 10px;
+  transform: translateX(-50%);
+}
+
+.container .blue-dot {
+  position: absolute;
+  background-color: rgb(46, 46, 136);
+  width: 5px;
+  height: 5px;
+  opacity: 0.7;
+  border: 1px solid rgb(46, 46, 136);
+  border-radius: 100%;
+  left: 50%;
+  top: 15px;
+  transform: translateX(-50%);
+}
+
+.container .app-header {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 5px;
+}
+
+.container .app-header i {
+  font-size: 35px;
+}
+
+.container .app-body {
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0.5);
+  height: 100%;
+  border: 1px solid white;
+  padding: 5px;
+  background: white;
+  border-radius: 20px;
+  margin-top: 10px;
+  transition: 0.5s ease all;
+  color: rgba(35, 105, 180, 1);
+}
+
+.container .weather-input {
+  position: relative;
+}
+
+.container .weather-input i {
+  position: absolute;
+  color: gray;
+  font-size: 20px;
+  top: 24px;
+  right: 10px;
+}
+
+.container .weather-input input {
+  width: 100%;
+  background: white;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 20px;
+  margin: 20px 0;
+}
+
+.container .weather-input input::placeholder {
+  font-family: "Poppins", sans-serif;
+}
+
+.container .weather-input input:focus {
+  outline: none;
+}
+
+.container .city-div {
+  display: flex;
+  margin: 10px 0;
+  justify-content: center;
+}
+
+.container .city-div p {
+  font-size: 20px;
+  text-align: center;
+}
+
+.container .city-div i {
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+.container .app-body .temp-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px 0;
+  transition: 0.2s ease all;
+}
+
+.container .app-body .temp-div i {
+  font-size: 60px;
+  margin: 10px 0;
+  animation: sun infinite 5s linear;
+  color: peru;
+}
+
+.container .app-body .temp-div em {
+  font-size: 20px;
+}
+
+.container .app-body .temp-div em span {
+  font-size: 40px;
+}
+
+.container .app-body .weather-div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.container .app-body .weather-div i {
+  font-size: 30px;
+  margin-right: -15px;
+}
+
+.container .app-body .weather-div .wind-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.container .app-body .weather-div .wind-div span,
+.container .app-body .weather-div .humidity-div span {
+  font-size: 18px;
+  text-transform: lowercase !important;
+}
+
+.container .app-body .weather-div .wind-div p,
+.container .app-body .weather-div .humidity-div p {
+  font-size: 12px;
+}
+
+@keyframes sun {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
