@@ -14,6 +14,12 @@ body {
   text-transform: capitalize;
   font-family: "Poppins", sans-serif;
   color: white;
+  background: linear-gradient(
+    90deg,
+    rgba(79, 117, 124, 1) 0%,
+    rgba(40, 75, 122, 0.5) 50%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
 }
 
 .tablet-border {
@@ -87,8 +93,33 @@ body {
   background: white;
   border-radius: 20px;
   margin-top: 10px;
-  transition: 0.5s ease all;
   color: rgba(35, 105, 180, 1);
+}
+
+.container .error-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .error-message img {
+  visibility: hidden;
+  opacity: 0;
+  width: 200px;
+  height: 200px;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%);
+  position: absolute;
+}
+
+.container .error-message p {
+  visibility: hidden;
+  position: absolute;
+  top: 80%;
+  color: crimson;
+  opacity: 0;
+  font-size: 12px;
 }
 
 .container .weather-input {
@@ -179,7 +210,7 @@ body {
 
 .container .app-body .weather-div .wind-div span,
 .container .app-body .weather-div .humidity-div span {
-  font-size: 18px;
+  font-size: 16px;
   text-transform: lowercase !important;
 }
 

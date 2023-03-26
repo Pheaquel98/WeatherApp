@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -31,12 +32,11 @@
         </div>
         <section class="app-body">
           <div class="city-div">
-            <i class="bi bi-geo-alt-fill"></i>
             <p class="city-name">istanbul</p>
           </div>
           <div class="temp-div">
             <i class="bi bi-brightness-high-fill"></i>
-            <em class="temp"><span>15°</span>C</em>
+            <em class="temp"><span class="temps">15°</span>C</em>
             <p class="temp-desc">Sunny</p>
           </div>
           <div class="weather-div">
@@ -52,6 +52,10 @@
             </div>
           </div>
         </section>
+        <div class="error-message">
+          <img class="error" src="/images/404.png" alt="" />
+          <p class="error-desc">Please enter a valid city or country name</p>
+        </div>
       </div>
     </div>
     <script src="main.js"></script>
