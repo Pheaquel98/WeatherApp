@@ -15,11 +15,13 @@ searchBar.addEventListener("keypress", (e) => {
 
 const getResult = async (cityName) => {
   let query = `${url}weather?q=${cityName}&appid=${key}&units=metric&lang=en`
-  await fetch(query)
-    .then((weather) => {
-      return weather.json()
-    })
-    .then(results)
+  try {
+    const response = await fetch(query)
+    const result = await response.json()
+    results(result)
+  } catch (error) {
+    console.log(error)
+  }
 }
 
 const results = (result) => {
